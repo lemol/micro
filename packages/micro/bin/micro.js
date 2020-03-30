@@ -11,6 +11,7 @@ const arg = require('arg');
 // Utilities
 const serve = require('../lib');
 const handle = require('../lib/handler');
+const enhance = require('../lib/enhancer');
 const {version} = require('../package');
 const logError = require('../lib/error');
 const parseEndpoint = require('../lib/parse-endpoint.js');
@@ -195,7 +196,7 @@ function registerShutdown(fn) {
 }
 
 function startEndpoint(module, endpoint) {
-	const server = new http.Server(serve(module));
+	const server = new http.Server(serve(enhance(module)));
 
 	server.on('error', err => {
 		console.error('micro:', err.stack);

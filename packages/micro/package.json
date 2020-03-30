@@ -1,5 +1,5 @@
 {
-  "name": "micro",
+  "name": "@lemol/micro",
   "version": "9.3.5-canary.3",
   "description": "Asynchronous HTTP microservices",
   "license": "MIT",
@@ -28,5 +28,6 @@
     "arg": "4.1.0",
     "content-type": "1.0.4",
     "raw-body": "2.4.1"
-  }
+  },
+  "devDependencies": {}
 }
